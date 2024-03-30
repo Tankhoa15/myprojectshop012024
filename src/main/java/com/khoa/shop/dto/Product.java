@@ -1,34 +1,13 @@
-package com.khoa.shop.entity;
+package com.khoa.shop.dto;
 
-import jakarta.persistence.*;
-
-@Entity
-@Table(name = "product")
-public class ProductEntity {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Product {
     private Long id;
-
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "description")
     private String description;
-
-    @Column(name = "price")
     private double price;
-
-    @Column(name = "quantity")
     private int quantity;
-
-    @Column(name = "image")
     private String image;
-
-    @Column(name = "category_id")
     private Long categoryId;
-
-    @Column(name = "brand_id")
     private Long brandId;
 
     public Long getId() {
