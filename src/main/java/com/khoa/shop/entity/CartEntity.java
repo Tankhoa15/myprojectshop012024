@@ -1,6 +1,5 @@
 package com.khoa.shop.entity;
 
-
 import jakarta.persistence.*;
 
 @Entity
