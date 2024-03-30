@@ -8,27 +8,6 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HomeController {
 
-//    @RequestMapping("/home")
-//    public ModelAndView home() {
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("index");
-//        return mv;
-//    }
-//
-//    @RequestMapping("/login")
-//    public ModelAndView login() {
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("login");
-//        return mv;
-//    }
-//
-//    @RequestMapping("/register")
-//    public ModelAndView register() {
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("register");
-//        return mv;
-//    }
-
     @GetMapping("/home")
     public String home() {
         return "index";
