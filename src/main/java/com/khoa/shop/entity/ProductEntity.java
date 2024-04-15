@@ -22,15 +22,6 @@ public class ProductEntity {
     @Column(name = "quantity")
     private int quantity;
 
-    @Column(name = "image")
-    private String image;
-
-    @Column(name = "category_id")
-    private Long categoryId;
-
-    @Column(name = "brand_id")
-    private Long brandId;
-
     public Long getId() {
         return id;
     }
@@ -70,28 +61,5 @@ public class ProductEntity {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public Long getBrandId() {
-        return brandId;
-    }
-
-    public void setBrandId(Long brandId) {
-        this.brandId = brandId;
-    }
+    
 }
