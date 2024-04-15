@@ -1,21 +1,17 @@
 package com.khoa.shop.service;
 
 import com.khoa.shop.entity.ProductEntity;
-import com.khoa.shop.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
 
-@Service
-public class ProductService {
+public interface ProductService {
+    List<ProductEntity> getAll();
 
-   @Autowired
-   ProductRepository repo;
+    ProductEntity findById(Long id);
 
-    public List<ProductEntity> getAllProduct() {
-        List<ProductEntity> products = (List<ProductEntity>) repo.findAll();
-        return products;
-    }
+    ProductEntity create(ProductEntity product);
 
+    ProductEntity update(ProductEntity product);
+
+    boolean delete(Long id);
 }

@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -16,14 +15,18 @@ import java.util.List;
 public class HomeController {
 
     @Autowired
-    ProductService service;
+    private ProductService productService;
 
-    //all product
-    private String getAllProduct(Model model){
-        List<ProductEntity> product = service.getAllProduct();
-        return "";
+    @GetMapping
+    public String getAllProducts(Model model) {
+        List<ProductEntity> products = productService.getAll();
+        model.addAttribute("products", products);
+        return "index";
     }
 
-
-
+    @GetMapping("/add")
+    public String addProduct(ProductEntity product) {
+        productService.create(product);
+        return "redirect:/";
+    }
 }
